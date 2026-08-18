@@ -71,7 +71,43 @@ GPT Orchestrator가 사용자 요청을 해석하고 적절한 프로젝트, 워
 
 반복된다는 이유만으로 자동화하지 않습니다.
 
-## 9. Continuous Improvement
+## 9. README 아카이브 규칙
+루트 `README.md`는 저장소의 최신 상태를 보여주는 문서로 유지합니다.
+
+다음과 같은 **중대한 README 변경 전에는 현재 버전을 먼저 보존**합니다.
+- 저장소 목적이나 방향이 크게 바뀌는 경우
+- Agent / Workflow 구조가 크게 변경되는 경우
+- 포트폴리오용 README를 대규모 개편하는 경우
+- 개발 Phase가 변경되는 경우
+- 사용자가 명시적으로 현재 버전 보존을 요청하는 경우
+
+아카이브 위치:
+`archive/README/`
+
+권장 파일명:
+`YYYY-MM-DD_vN.md`
+또는 변경 목적이 분명한 경우 `YYYY-MM-DD_<description>.md`
+
+오타 수정, 링크 수정, 문구 한두 줄 변경 등 경미한 변경은 별도 아카이브를 만들지 않습니다.
+
+README 대규모 수정 Workflow:
+```text
+README 수정 요청
+↓
+현재 README 확인
+↓
+중대한 변경 여부 판단
+↓
+YES
+↓
+현재 README를 archive/README/에 저장
+↓
+루트 README 업데이트
+↓
+GitHub 반영 확인
+```
+
+## 10. Continuous Improvement
 - 반복 질문/작업 탐지
 - 불필요한 왕복 대화 탐지
 - 프로젝트 역할 충돌 탐지
@@ -79,7 +115,7 @@ GPT Orchestrator가 사용자 요청을 해석하고 적절한 프로젝트, 워
 - 지침 개선 후보 관리
 - Agent 역할 재조정
 
-## 10. 향후 Multi-Agent 방향
+## 11. 향후 Multi-Agent 방향
 1. GPT 중심 단일 Orchestrator
 2. Python 함수와 Tool 연결
 3. FastAPI 기반 서비스화
