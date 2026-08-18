@@ -151,3 +151,56 @@ DONE
 **Status:** CANDIDATE
 
 `04_시장_AI_리서치_센터`의 조사 결과를 학습, 커리어, 비즈니스 기회로 변환해 적절한 프로젝트로 전달하는 Workflow 후보입니다.
+
+---
+
+## WF-005 — README 버전 아카이브
+
+**Status:** ACTIVE
+
+### 목적
+루트 `README.md`를 항상 최신 상태로 유지하면서, 큰 구조 변경 전의 중요한 버전을 사람이 쉽게 확인할 수 있도록 별도 보존합니다.
+
+### Trigger
+다음 조건 중 하나가 발생할 때 실행합니다.
+- 저장소의 목적/방향 변경
+- Agent 또는 Workflow 구조의 대규모 변경
+- 포트폴리오 README 대규모 개편
+- 개발 Phase 변경
+- 사용자의 명시적 아카이브 요청
+
+### Input
+- 현재 루트 `README.md`
+- 변경 예정 내용
+- 아카이브 날짜/버전
+
+### Process
+```text
+README 변경 요청
+↓
+현재 README 확인
+↓
+중대한 변경인가?
+├─ NO → README만 수정
+└─ YES
+    ↓
+현재 README를 archive/README/에 스냅샷 저장
+    ↓
+새 README 반영
+    ↓
+GitHub에서 아카이브와 최신 README 모두 확인
+    ↓
+DONE
+```
+
+### Output
+- `archive/README/YYYY-MM-DD_vN.md` 또는 설명형 파일명
+- 최신 루트 `README.md`
+
+### 완료 조건
+- 변경 전 README 아카이브 파일 존재 확인
+- 최신 README 반영 확인
+
+### 예외 처리
+- 같은 이름의 아카이브 파일이 이미 있으면 덮어쓰지 않고 다음 버전 번호를 사용
+- 오타/링크 등 경미한 변경은 아카이브 생성을 생략
