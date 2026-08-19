@@ -160,7 +160,7 @@ GitHub
 
 canonical 파일 위치:
 
-`AGENT/AGENT-GPT-Orchestrator/AGENT/projects/02_학습_아카이브_매니저/LEARNER_STATE.md`
+`LEARNER_STATE.md`
 
 ---
 
@@ -192,6 +192,7 @@ canonical 파일 위치:
 Blast-Forge-Lab/
 │
 ├── README.md
+├── LEARNER_STATE.md
 │
 ├── TIL/
 │   └── Daily learning archive
@@ -213,8 +214,7 @@ Blast-Forge-Lab/
             ├── projects/
             │   ├── 01_AI_학습_코치/
             │   ├── 02_학습_아카이브_매니저/
-            │   │   ├── WORKFLOWS.md
-            │   │   └── LEARNER_STATE.md
+            │   │   └── WORKFLOWS.md
             │   ├── 03_MD_커리어_전략실/
             │   └── 04_시장_AI_리서치_센터/
             │
